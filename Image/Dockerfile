@@ -20,7 +20,11 @@ ENV CMDLINE_HOME="${HOME}/.local/cmdline-tools"
 ENV CMDLINE="${HOME}/.local/cmdline-tools/cmdline-tools/bin"
 
 # setup flutter sdk
-ENV PATH=${PATH}:${FLUTTER_HOME}/flutter/bin:${CMDLINE}
+ENV PATH=${PATH}:${FLUTTER_HOME}/flutter/bin
+ENV PATH=${PATH}:${ANDROID_HOME}/platform-tools
+ENV PATH=${PATH}:${ANDROID_HOME}/platforms
+ENV PATH=${PATH}:${ANDROID_HOME}/emulators
+ENV PATH=${PATH}:${CMDLINE_HOME}:${CMDLINE}
 
 
 # setup command line tools
