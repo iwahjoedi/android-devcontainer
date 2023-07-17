@@ -10,15 +10,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build --pull --rm -f "Image/Dockerfile" -t flutterdevcontainer:latest "Image"
+      run: docker build --pull --rm -f "Image/Dockerfile" -t androiddevcontainer:latest "Image"
     
     - name: Push docker image to ghcr.io
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: gdscparuluniversity
-        password: ${{ secrets.GITHUB_TOKEN }}
+        username: iwahjoedi
+        password: ${{ secrets.GH_TOKEN }}
         
     - run: |
-        docker tag flutterdevcontainer:latest ghcr.io/gdscparuluniversity/flutterdevcontainer:latest
-        docker push ghcr.io/gdscparuluniversity/flutterdevcontainer:latest
+        docker tag androiddevcontainer:latest ghcr.io/iwahjoedi/androiddevcontainer:latest
+        docker push ghcr.io/iwahjoedi/androiddevcontainer:latest
