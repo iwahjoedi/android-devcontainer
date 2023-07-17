@@ -1,4 +1,4 @@
-FROM ghcr.io/gdscparuluniversity/flutterdevcontainer:latest
+FROM ghcr.io/iwahjoedi/androiddevcontainer:latest
 
 ENV DEVCONTAINER="true"
 
