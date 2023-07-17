@@ -18,7 +18,7 @@ jobs:
       with:
         registry: ghcr.io
         username: iwahjoedi
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.GH_TOKEN }}
         
     - run: |
         docker tag androiddevcontainer:${{ github.sha }} ghcr.io/iwahjoedi/android-devcontainer:${{ github.sha }}
