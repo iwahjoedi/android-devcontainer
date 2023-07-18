@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build --pull --rm -f "Image/Dockerfile" -t androiddevcontainer:latest "Image"
+      run: docker build --pull --rm -f "Image/Dockerfile" -t android-devcontainer:latest "Image"
     
     - name: Push docker image to ghcr.io
       uses: docker/login-action@v1
@@ -20,5 +20,5 @@ jobs:
         password: ${{ secrets.GH_TOKEN }}
         
     - run: |
-        docker tag androiddevcontainer:latest ghcr.io/iwahjoedi/androiddevcontainer:latest
-        docker push ghcr.io/iwahjoedi/androiddevcontainer:latest
+        docker tag android-devcontainer:latest ghcr.io/iwahjoedi/android-devcontainer:latest
+        docker push ghcr.io/iwahjoedi/android-devcontainer:latest
