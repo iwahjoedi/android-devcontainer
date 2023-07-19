@@ -1,4 +1,4 @@
-FROM ghcr.io/iwahjoedi/androiddevcontainer:latest
+FROM ghcr.io/iwahjoedi/android-devcontainer:latest
 
 ENV DEVCONTAINER="true"
 
